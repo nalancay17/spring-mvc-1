@@ -40,4 +40,7 @@
 		<property name="templateEngine" ref="templateEngine" />
 	</bean>
 
+	<!-- indicamos a Spring donde estan nuestros recursos externos -->
+	<mvc:resources location="/recursos/" mapping="/recursos/**"></mvc:resources>
+
 </beans>
