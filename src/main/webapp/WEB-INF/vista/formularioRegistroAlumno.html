@@ -8,10 +8,10 @@
 
 	<form th:action="@{/alumno/procesarFormulario}" th:object="${alumno}" method="POST">
 		<label for="nombre">Nombre:</label>
-		<input type="text" id="nombre" name="nombre" th:field="*{nombre}">
+		<input type="text" th:field="*{nombre}">
 
 		<label for="apellido">Apellido:</label>
-		<input type="text" id="apellido" name="apellido" th:field="*{apellido}">
+		<input type="text" th:field="*{apellido}">
 
 		<label for="materia">Materia:</label>
 		<select th:field="*{materia}">
@@ -33,13 +33,13 @@
 
 		<br><br><br>
 		<label for="idiomaIngles">Inglés</label>
-		<input type="checkbox" value="Inglés" id="idioma" name="idioma" th:field="*{idioma}">
+		<input type="checkbox" value="Inglés" th:field="*{idioma}">
 
 		<label for="idiomaJapones">Japonés</label>
-		<input type="checkbox" value="Japonés" id="idioma" name="idioma" th:field="*{idioma}">
+		<input type="checkbox" value="Japonés" th:field="*{idioma}">
 
 		<label for="idiomaEspañol">Español</label>
-		<input type="checkbox" value="Español" id="idioma" name="idioma" th:field="*{idioma}">
+		<input type="checkbox" value="Español" th:field="*{idioma}">
 
 		<br><br><br>
 		<input type="submit">
