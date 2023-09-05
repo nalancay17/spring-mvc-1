@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Formulario registro de alumno</title>
+</head>
+<body>
+
+	<form th:action="@{/alumno/procesarFormulario}" th:object="${alumno}" method="POST">
+		<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre" name="nombre" th:field="*{nombre}">
+
+		<label for="apellido">Apellido:</label>
+		<input type="text" id="apellido" name="apellido" th:field="*{apellido}">
+
+		<input type="submit">
+	</form>
+
+</body>
+</html>
