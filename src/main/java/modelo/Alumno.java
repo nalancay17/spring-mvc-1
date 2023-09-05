@@ -5,6 +5,7 @@ public class Alumno {
 	private String nombre;
 	private String apellido;
 	private String materia;
+	private String ciudad;
 
 	public String getNombre() {
 		return nombre;
@@ -28,6 +29,14 @@ public class Alumno {
 
 	public void setMateria(String materia) {
 		this.materia = materia;
+	}
+
+	public String getCiudad() {
+		return ciudad;
+	}
+
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
 	}
 
 }
