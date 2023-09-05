@@ -21,8 +21,8 @@ public class AlumnoController {
 	}
 
 	@PostMapping("/procesarFormulario")
-	public String procesarFormulario(@ModelAttribute("alumno") Alumno alumno, Model modelo) {
-		modelo.addAttribute("alumno", alumno);
+	public String procesarFormulario(@ModelAttribute("alumno") Alumno alumno) {
 		return "formularioAlumnoProcesado";
 	}
+
 }
