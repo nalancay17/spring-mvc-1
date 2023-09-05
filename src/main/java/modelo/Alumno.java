@@ -6,6 +6,7 @@ public class Alumno {
 	private String apellido;
 	private String materia;
 	private String ciudad;
+	private String idioma;
 
 	public String getNombre() {
 		return nombre;
@@ -37,6 +38,14 @@ public class Alumno {
 
 	public void setCiudad(String ciudad) {
 		this.ciudad = ciudad;
+	}
+
+	public String getIdioma() {
+		return idioma;
+	}
+
+	public void setIdioma(String idioma) {
+		this.idioma = idioma;
 	}
 
 }
