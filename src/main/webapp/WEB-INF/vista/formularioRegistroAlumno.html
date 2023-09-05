@@ -13,6 +13,14 @@
 		<label for="apellido">Apellido:</label>
 		<input type="text" id="apellido" name="apellido" th:field="*{apellido}">
 
+		<label for="materia">Materia:</label>
+		<select th:field="*{materia}">
+			<option value="Diseño" th:text="Diseño">
+			<option value="Karate" th:text="Karate">
+			<option value="Comercio" th:text="Comercio">
+			<option value="Danza" th:text="Danza">
+		</select>
+
 		<input type="submit">
 	</form>
 
