@@ -1,7 +1,10 @@
 package controlador;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +24,10 @@ public class AlumnoController {
 	}
 
 	@PostMapping("/procesarFormulario")
-	public String procesarFormulario(@ModelAttribute("alumno") Alumno alumno) {
+	public String procesarFormulario(@Valid @ModelAttribute("alumno") Alumno alumno,
+			BindingResult resultadoValidacion) {
+		if (resultadoValidacion.hasErrors())
+			return "formularioRegistroAlumno";
 		return "formularioAlumnoProcesado";
 	}
 
