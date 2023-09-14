@@ -43,4 +43,9 @@
 	<!-- indicamos a Spring donde estan nuestros recursos externos -->
 	<mvc:resources location="/recursos/" mapping="/recursos/**"></mvc:resources>
 
+	<!-- para internacionalizacion de mensajes -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="resources/messages" />
+	</bean>
+
 </beans>
