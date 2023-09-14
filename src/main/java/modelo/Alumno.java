@@ -5,6 +5,7 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Alumno {
@@ -30,6 +31,9 @@ public class Alumno {
 
 	private String materia;
 	private String ciudad;
+
+	@Pattern(regexp = "[0-9]{4}", message = "Debe ser de 4 valores numéricos")
+	private String codigoPostal;
 	private String idioma;
 
 	public String getNombre() {
@@ -78,6 +82,14 @@ public class Alumno {
 
 	public void setCiudad(String ciudad) {
 		this.ciudad = ciudad;
+	}
+
+	public String getCodigoPostal() {
+		return codigoPostal;
+	}
+
+	public void setCodigoPostal(String codigoPostal) {
+		this.codigoPostal = codigoPostal;
 	}
 
 	public String getIdioma() {

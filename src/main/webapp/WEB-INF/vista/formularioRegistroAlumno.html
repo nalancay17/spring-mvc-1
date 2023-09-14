@@ -55,6 +55,12 @@
 		<label th:for="ciudad3">Rosario</label>
 
 		<br><br><br>
+		<label for="codigoPostal">Código postal:</label>
+		<input type="text" th:field="*{codigoPostal}">
+		<p th:if="${#fields.hasErrors('codigoPostal')}" th:errorclass="error"
+			th:errors="*{codigoPostal}" />
+
+		<br><br><br>
 		<label for="idioma1">Inglés</label>
 		<input type="checkbox" value="Inglés" th:field="*{idioma}">
 
